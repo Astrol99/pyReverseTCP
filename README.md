@@ -1,18 +1,14 @@
 # pyReverseTCP
 ### A backdoor program made entirely in python
 ## Installation
-1. Cloning this repo
+> Cloning this repo
 ```
 $ git clone https://github.com/Astrol99/pyReverseTCP.git
 ```
-2. Install required dependencies
-
-Go into repo directory first
+> Install required dependencies
+Use pip with provided requirements.txt with all dependencies listed
 ```
-$ cd pyReverseTCP/
-```
-Then use pip with provided requirements.txt with all dependencies listed
-```
+$ cd pyReverseTCP
 $ pip install -r requirements.txt
 ```
 ## Getting Started
